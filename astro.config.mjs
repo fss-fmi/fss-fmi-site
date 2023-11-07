@@ -23,6 +23,7 @@ export default defineConfig({
                         folder: 'src/content/news',
                         create: true,
                         delete: true,
+                        slug: "{{year}}/{{month}}/{{title}}",
                         fields: [
                             {label: 'Title', name: 'title', widget: 'string'},
                             {label: 'Description', name: 'description', widget: 'string'},
