@@ -1,5 +1,71 @@
 {
   "Index": {
     "title": "Тест заглавие"
+  },
+  "navbar-links": {
+    "about": {
+      "name": "За нас",
+      "description": "Описание на нас",
+      "join": {
+        "name": "Включи се",
+        "description": "Описание"
+      },
+      "commissions": {
+        "name": "Комисии",
+        "description": "Описание"
+      },
+      "regulations-and-protocols": {
+        "name": "Правилник и протоколи",
+        "description": "Описание"
+      },
+      "members": {
+        "name": "Членове",
+        "description": "Описание"
+      }
+    },
+    "news": "Новини",
+    "events": "Събития",
+    "resources": {
+      "name": "Ресурси",
+      "description": "Описание",
+      "candidates": {
+        "name": "Кандидат-студенти",
+        "description": "Описание"
+      },
+      "bachelors": {
+        "name": "Бакалаври",
+        "description": "Описание"
+      },
+      "masters": {
+        "name": "Магистри",
+        "description": "Описание"
+      },
+      "doctorates": {
+        "name": "Докторанти",
+        "description": "Описание"
+      },
+      "administrative-documents": {
+        "name": "Административни документи",
+        "description": "Описание"
+      },
+      "carrier-center": {
+        "name": "Кариерен център",
+        "description": "Описание"
+      },
+      "student-rights-and-obligations": {
+        "name": "Права и задължения на студентите",
+        "description": "Описание"
+      },
+      "faq": {
+        "name": "Често задавани въпроси",
+        "description": "Описание"
+      }
+    },
+    "misc": {
+      "name": "Други"
+    },
+    "contact": {
+      "name": "Контакт"
+    }
   }
 }
