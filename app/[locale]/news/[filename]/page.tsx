@@ -11,11 +11,13 @@ async function NewsPost() {
   const newsPost = await getNewsPost(relativePath);
 
   return (
-    <NewsPostContent
-      data={JSON.stringify(newsPost.data)}
-      query={newsPost.query}
-      variables={newsPost.variables}
-    />
+    <main className="flex flex-col items-center justify-center px-4 py-6 md:px-6 lg:py-16 md:py-12">
+      <NewsPostContent
+        data={JSON.stringify(newsPost.data)}
+        query={newsPost.query}
+        variables={newsPost.variables}
+      />
+    </main>
   );
 }
 

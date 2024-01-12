@@ -15,12 +15,9 @@ export default defineConfig({
   contentApiUrlOverride: '/api/tina/gql',
   authProvider: isLocal
     ? new LocalAuthProvider()
-    : new // Your hosting provider likely exposes this as an environment variable
-      UsernamePasswordAuthJSProvider(),
+    : new UsernamePasswordAuthJSProvider(),
   branch,
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
   build: {
     outputFolder: 'admin',
@@ -38,14 +35,32 @@ export default defineConfig({
       TinaUserCollection,
       {
         name: 'news',
-        label: 'News',
+        label: 'Новини',
         path: 'content/news',
         fields: [
           {
             type: 'string',
             name: 'title',
-            label: 'Title',
+            label: 'Заглавие',
             isTitle: true,
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'abstract',
+            label: 'Абстракт',
+            required: false,
+          },
+          {
+            type: 'datetime',
+            name: 'publicationDate',
+            label: 'Дата на публикуване',
+            required: true,
+          },
+          {
+            type: 'image',
+            name: 'heroImage',
+            label: 'Заглавно изображение',
             required: true,
           },
           {
