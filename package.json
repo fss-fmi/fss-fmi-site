@@ -17,15 +17,20 @@
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
+    "@tinacms/datalayer": "^1.2.32",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "next": "14.0.4",
+    "next-auth": "^4.24.5",
     "next-intl": "^3.4.2",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "tinacms": "^1.5.28"
+    "tinacms": "^1.5.28",
+    "tinacms-authjs": "^1.0.5",
+    "tinacms-gitprovider-github": "^1.0.3",
+    "upstash-redis-level": "^1.1.1"
   },
   "devDependencies": {
     "@tinacms/cli": "^1.5.39",

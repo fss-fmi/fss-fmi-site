@@ -1,4 +1,4 @@
-import { client } from '@fss-fmi-site/tina/__generated__/client';
+import { client } from '@fss-fmi-site/tina/__generated__/databaseClient';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 async function getNewsPost(relativePath: string) {
