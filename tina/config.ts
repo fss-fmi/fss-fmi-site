@@ -55,6 +55,10 @@ export default defineConfig({
             isBody: true,
           },
         ],
+        ui: {
+          // eslint-disable-next-line no-underscore-dangle
+          router: ({ document }) => `bg/news/${document._sys.filename}`,
+        },
       },
     ],
   },

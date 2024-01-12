@@ -1,6 +1,6 @@
 import React from 'react';
 import { client } from '@fss-fmi-site/tina/__generated__/databaseClient';
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import { NewsPostContent } from '@fss-fmi-site/components/news-post-content/news-post-content';
 
 async function getNewsPost(relativePath: string) {
   return client.queries.news({ relativePath });
@@ -11,10 +11,11 @@ async function NewsPost() {
   const newsPost = await getNewsPost(relativePath);
 
   return (
-    <>
-      <h1>{newsPost.data.news.title}</h1>
-      <TinaMarkdown content={newsPost.data.news.body} />
-    </>
+    <NewsPostContent
+      data={JSON.stringify(newsPost.data)}
+      query={newsPost.query}
+      variables={newsPost.variables}
+    />
   );
 }
 
