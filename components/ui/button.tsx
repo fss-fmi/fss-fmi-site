@@ -40,8 +40,24 @@ export interface ButtonProps
   asChild?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+type ButtonPropsExtended = ButtonProps & {
+  className?: string;
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  asChild: boolean;
+};
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonPropsExtended>(
+  (
+    {
+      className = '',
+      variant = 'default',
+      size = 'default',
+      asChild = false,
+      ...props
+    }: ButtonProps,
+    ref,
+  ) => {
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
@@ -53,5 +69,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 );
 Button.displayName = 'Button';
+Button.defaultProps = {
+  className: '',
+  variant: 'default',
+  size: 'default',
+};
 
 export { Button, buttonVariants };

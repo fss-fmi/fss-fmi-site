@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { NavbarLinksDesktop } from './components/navbar-links-desktop';
 import { NavbarLinksMobile } from './components/navbar-links-mobile';

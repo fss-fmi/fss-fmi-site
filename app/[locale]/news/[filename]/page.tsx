@@ -1,3 +1,4 @@
+import React from 'react';
 import { client } from '@fss-fmi-site/tina/__generated__/databaseClient';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 

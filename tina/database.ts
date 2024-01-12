@@ -15,9 +15,9 @@ export default isLocal
   : createDatabase({
       gitProvider: new GitHubProvider({
         branch,
-        owner: process.env.GITHUB_OWNER,
-        repo: process.env.GITHUB_REPO,
-        token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
+        owner: process.env.GITHUB_OWNER || 'fss-fmi',
+        repo: process.env.GITHUB_REPO || 'fss-fmi-site',
+        token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN || '',
       }),
       databaseAdapter: new RedisLevel({
         redis: {
